@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="10" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-03-10T18:28:08 IST" name="Default suite" finished-at="2021-03-10T18:37:57 IST" duration-ms="589373">
+    <groups>
+    </groups>
+    <test started-at="2021-03-10T18:28:08 IST" name="Default test" finished-at="2021-03-10T18:37:57 IST" duration-ms="589373">
+      <class name="testcase.Smoketest">
+        <test-method is-config="true" signature="initial()[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:28:07 IST" name="initial" finished-at="2021-03-10T18:28:08 IST" duration-ms="659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initial -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:28:08 IST" name="setup" finished-at="2021-03-10T18:28:27 IST" duration-ms="19197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:28:27 IST" name="login" finished-at="2021-03-10T18:28:57 IST" duration-ms="29616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:28:57 IST" name="teardown" finished-at="2021-03-10T18:28:57 IST" duration-ms="265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=Smoketest.login()[pri:0, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Add_Customer()[pri:1, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:28:57 IST" name="Add_Customer" finished-at="2021-03-10T18:29:05 IST" duration-ms="8247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Customer -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:05 IST" name="teardown" finished-at="2021-03-10T18:29:05 IST" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Add_Customer status=SUCCESS method=Smoketest.Add_Customer()[pri:1, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Add_job_Prefinal()[pri:2, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:05 IST" name="Add_job_Prefinal" finished-at="2021-03-10T18:29:14 IST" duration-ms="8748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_job_Prefinal -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:14 IST" name="teardown" finished-at="2021-03-10T18:29:14 IST" duration-ms="43" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Add_job_Prefinal status=SUCCESS method=Smoketest.Add_job_Prefinal()[pri:2, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Add_job_Final_Complete()[pri:3, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:14 IST" name="Add_job_Final_Complete" finished-at="2021-03-10T18:29:27 IST" duration-ms="12690" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a id="newJob" ng-if="canWork" has-permission="Jobs,writeaccess" class="btn btn-primary btn-small loading_btn save_btn ng-scope" href="/customers/customer_list/1050/jobs/news">...</a> is not clickable at point (1433, 419). Other element would receive the click: <div class="commusoft-loading-wrap ng-animate commusoft-has-loaded-add" ng-class="{'commusoft-has-loaded' : $root.commusoft_loading === false}" style="transition-property: none;">...</div>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a id="newJob" ng-if="canWork" has-permission="Jobs,writeaccess" class="btn btn-primary btn-small loading_btn save_btn ng-scope" href="/customers/customer_list/1050/jobs/news">...</a> is not clickable at point (1433, 419). Other element would receive the click: <div class="commusoft-loading-wrap ng-animate commusoft-has-loaded-add" ng-class="{'commusoft-has-loaded' : $root.commusoft_loading === false}" style="transition-property: none;">...</div>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at action.Wrapper.click(Wrapper.java:113)
+at pages.CreateJob.addjob(CreateJob.java:15)
+at testcase.Smoketest.Add_job_Final_Complete(Smoketest.java:61)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_job_Final_Complete -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:27 IST" name="teardown" finished-at="2021-03-10T18:29:29 IST" duration-ms="2208" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Add_job_Final_Complete status=FAILURE method=Smoketest.Add_job_Final_Complete()[pri:3, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Addjob_NoRules()[pri:5, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:29 IST" name="Addjob_NoRules" finished-at="2021-03-10T18:29:56 IST" duration-ms="26761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Addjob_NoRules -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:56 IST" name="teardown" finished-at="2021-03-10T18:29:56 IST" duration-ms="36" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Addjob_NoRules status=SUCCESS method=Smoketest.Addjob_NoRules()[pri:5, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Addjob_NoRules_Adddtional()[pri:6, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:29:56 IST" name="Addjob_NoRules_Adddtional" finished-at="2021-03-10T18:30:02 IST" duration-ms="5671" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <a id="newJob" ng-if="canWork" has-permission="Jobs,writeaccess" class="btn btn-primary btn-small loading_btn save_btn ng-scope" href="/customers/customer_list/1050/jobs/news">...</a> is not clickable at point (1433, 419). Other element would receive the click: <div class="commusoft-loading-wrap ng-animate commusoft-has-loaded-add" ng-class="{'commusoft-has-loaded' : $root.commusoft_loading === false}" style="transition-property: none;">...</div>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a id="newJob" ng-if="canWork" has-permission="Jobs,writeaccess" class="btn btn-primary btn-small loading_btn save_btn ng-scope" href="/customers/customer_list/1050/jobs/news">...</a> is not clickable at point (1433, 419). Other element would receive the click: <div class="commusoft-loading-wrap ng-animate commusoft-has-loaded-add" ng-class="{'commusoft-has-loaded' : $root.commusoft_loading === false}" style="transition-property: none;">...</div>
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at action.Wrapper.click(Wrapper.java:113)
+at pages.CreateJob.addjob(CreateJob.java:15)
+at testcase.Smoketest.Addjob_NoRules_Adddtional(Smoketest.java:95)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Addjob_NoRules_Adddtional -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:30:02 IST" name="teardown" finished-at="2021-03-10T18:30:10 IST" duration-ms="8077" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Addjob_NoRules_Adddtional status=FAILURE method=Smoketest.Addjob_NoRules_Adddtional()[pri:6, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Estimate_Accept()[pri:7, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:30:10 IST" name="Estimate_Accept" finished-at="2021-03-10T18:31:31 IST" duration-ms="81624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Estimate_Accept -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:31:31 IST" name="teardown" finished-at="2021-03-10T18:31:31 IST" duration-ms="31" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Estimate_Accept status=SUCCESS method=Smoketest.Estimate_Accept()[pri:7, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Estimate_Reject()[pri:8, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:31:31 IST" name="Estimate_Reject" finished-at="2021-03-10T18:33:12 IST" duration-ms="100584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Estimate_Reject -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:33:12 IST" name="teardown" finished-at="2021-03-10T18:33:12 IST" duration-ms="40" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Estimate_Reject status=SUCCESS method=Smoketest.Estimate_Reject()[pri:8, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Addjob_NoRules_DiaryEvent()[pri:9, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:33:12 IST" name="Addjob_NoRules_DiaryEvent" finished-at="2021-03-10T18:33:46 IST" duration-ms="33999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Addjob_NoRules_DiaryEvent -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:33:46 IST" name="teardown" finished-at="2021-03-10T18:33:46 IST" duration-ms="52" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Addjob_NoRules_DiaryEvent status=SUCCESS method=Smoketest.Addjob_NoRules_DiaryEvent()[pri:9, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Addpayment_job()[pri:10, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:33:46 IST" name="Addpayment_job" finished-at="2021-03-10T18:34:28 IST" duration-ms="41628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Addpayment_job -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:34:28 IST" name="teardown" finished-at="2021-03-10T18:34:28 IST" duration-ms="42" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Addpayment_job status=SUCCESS method=Smoketest.Addpayment_job()[pri:10, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="Workaddress_Add()[pri:11, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:34:28 IST" name="Workaddress_Add" finished-at="2021-03-10T18:34:52 IST" duration-ms="24357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Workaddress_Add -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:34:52 IST" name="teardown" finished-at="2021-03-10T18:34:52 IST" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Workaddress_Add status=SUCCESS method=Smoketest.Workaddress_Add()[pri:11, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="WA_Add_job_Prefinal()[pri:12, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:34:52 IST" name="WA_Add_job_Prefinal" finished-at="2021-03-10T18:35:01 IST" duration-ms="9158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WA_Add_job_Prefinal -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:35:01 IST" name="teardown" finished-at="2021-03-10T18:35:01 IST" duration-ms="37" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WA_Add_job_Prefinal status=SUCCESS method=Smoketest.WA_Add_job_Prefinal()[pri:12, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="WA_Addpayment_job()[pri:13, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:35:01 IST" name="WA_Addpayment_job" finished-at="2021-03-10T18:36:31 IST" duration-ms="89954" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(@class,'overflow_handsontable select_icon')])[1]"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97
+*** Element info: {Using=xpath, value=(//td[contains(@class,'overflow_handsontable select_icon')])[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//td[contains(@class,'overflow_handsontable select_icon')])[1]"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97
+*** Element info: {Using=xpath, value=(//td[contains(@class,'overflow_handsontable select_icon')])[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at action.Wrapper.click(Wrapper.java:113)
+at pages.Invoice.Full_Breakdown_des(Invoice.java:84)
+at testcase.Smoketest.WA_Addpayment_job(Smoketest.java:249)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WA_Addpayment_job -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:36:31 IST" name="teardown" finished-at="2021-03-10T18:36:32 IST" duration-ms="377" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WA_Addpayment_job status=FAILURE method=Smoketest.WA_Addpayment_job()[pri:13, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="WA_Estimate_Accept()[pri:14, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:36:32 IST" name="WA_Estimate_Accept" finished-at="2021-03-10T18:37:57 IST" duration-ms="85407" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@class='handsontableInput']"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97
+*** Element info: {Using=xpath, value=//textarea[@class='handsontableInput']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea[@class='handsontableInput']"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-VK59J2P', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ranjit\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d0361aa15ead3cc299c253a45500d97
+*** Element info: {Using=xpath, value=//textarea[@class='handsontableInput']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at action.Wrapper.clear(Wrapper.java:149)
+at pages.Estimate.Estimate_Price_NoBreakdown_PartsTotal(Estimate.java:50)
+at testcase.Smoketest.WA_Estimate_Accept(Smoketest.java:280)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WA_Estimate_Accept -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:testcase.Smoketest@7671cb68]" started-at="2021-03-10T18:37:57 IST" name="teardown" finished-at="2021-03-10T18:37:57 IST" duration-ms="374" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WA_Estimate_Accept status=FAILURE method=Smoketest.WA_Estimate_Accept()[pri:14, instance:testcase.Smoketest@7671cb68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcase.Smoketest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
