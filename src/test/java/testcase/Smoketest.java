@@ -283,6 +283,7 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_InvoiceSchedule_Retention();
 		estimate.Estimate_SendtoCustomer();
 		estimate.Estimate_Accept();
+		Thread.sleep(6000);
 	}
 	
 	
