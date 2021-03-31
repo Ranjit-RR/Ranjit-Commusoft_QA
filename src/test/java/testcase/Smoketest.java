@@ -285,32 +285,6 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Accept();
 		Thread.sleep(6000);
 	}
-	@Test(priority = 14)
-	public void WA_Estimate_Accept1() throws InterruptedException
-	{
-		System.out.println("Test");
-		System.out.println("Test");
-		System.out.println("Testing");
-	}
-	@Test(priority = 15)
-	public void WA_Estidfmate_Accept1() throws InterruptedException
-	{
-		System.out.println("Test");
-		System.out.println("Test");
-		System.out.println("Testing");
-		System.out.println("request");
-		System.out.println("New item");
-	}
-	@Test(priority = 16)
-	public void WA_Estidfmsate_Accept1() throws InterruptedException
-	{
-		System.out.println("Test");
-		System.out.println("Test");
-		System.out.println("Testing");
-		System.out.println("request");
-		System.out.println("New item");
-	}
-	
 	
 
 }
