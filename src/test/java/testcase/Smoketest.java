@@ -289,6 +289,7 @@ public class Smoketest extends Baseclass {
 	public void WA_Estimate_Accept1() throws InterruptedException
 	{
 		System.out.println("Test");
+		System.out.println("now update");
 	}
 	
 	
