@@ -43,8 +43,8 @@ String homepage;
 		search.searchbox_supplier_parts_nominalcode("Part");
 		search.parts_deliverymethod("Delivery to Office");
 		search.supplierpo_items("Item");
-		Job.PO_item_unitprice("(//td[@class=\"overflow_handsontable\"])[2]","(//textarea[@class=\"handsontableInput\"])[4]","100");
-		Job.PO_item_unitprice("//td[@class=\"overflow_handsontable current highlight\"]", "//*[@id=\"job_item_new_purchase_order\"]/div[6]/textarea","200");
+		Job.PO_item_unitprice("100");
+		Job.PO_item_saleprice("200");
 		search.searchbox_supplier_item_nominalcode("Parts");
 		Job.Add_PO_button();	
 	}
@@ -53,7 +53,8 @@ String homepage;
 	{
 		//PO(); //call the method inside the current class
 		Thread.sleep(3000);
-		click("(//a[@class=\"ng-scope\"])[27]");//click view
+		CreateJob job = new CreateJob(driver);
+		job.view_po();
 		
 		/*ASSERTION for the total values*/
 		
@@ -89,14 +90,14 @@ String homepage;
 		Thread.sleep(3000);
 		//driver.get("https://stage2.commusoft.net/customers/customer/1132/jobs/1258/costs/purchase_order/56/details");
 		//driver.get("https://dev.commusoft.net/customers/customer/1073/jobs/420/costs/purchase_order/75/details");
-		click("(//span[@class=\"ng-scope\"])[26]");//click edit PO
 		CreateJob Job = new CreateJob(driver);
-		Job.PO_item_unitprice("//*[@id=\"part_edit_purchase_order\"]/div[1]/div/div/div/table/tbody/tr/td[4]", "//textarea[@class=\"handsontableInput\"]", "600");//click on unit price of parts
+		Job.edit_po();
+		Job.PO_part_unitprice_eidt("600");
 		searchengine searchvat = new searchengine(driver);
 		searchvat.searchboxedit_supplier_partVAT("15.00");
-		Job.PO_item_unitprice("(//td[@class=\"overflow_handsontable\"])[2]", "(//textarea[@class=\"handsontableInput\"])[2]","200");
+		Job.PO_part_itemprice_eidt("200");
 		searchvat.searchboxedit_supplier_itemVAT("15.00");
-		click("//span[@ng-hide=\"saving\"]");//hit save button
+		Job.save_po();
 		
      /*ASSERTION for the total values*/
 		
@@ -131,15 +132,9 @@ String homepage;
 	{
 		Thread.sleep(3000);
 		//driver.get("https://dev.commusoft.net/customers/customer/1069/jobs/416/costs/purchase_order/74/details");
-		click("(//span[@class=\"ng-scope\"])[16]");//click invoice
-		click("//a[@class=\"btn btn-primary btn-small ng-scope\"]");// click add invoice
-		click("(//span[@class=\"help-block\"])[1]");
-		selectdropdownindex("//select[@class=\"full-width-select ng-untouched ng-pristine ng-invalid\"]", 1);
-		click("//a[@class=\"without-margin\"]");// lineitem
-		click("(//input[@class=\"inline-checkbox ng-untouched ng-pristine ng-valid\"])[1]");//click part checkbox
-		isenabled("//a[@id=\"save-panel-btn\"]");//save and add line items
-		click("(//input[@class=\"inline-checkbox ng-untouched ng-pristine ng-valid\"])[1]");//click labour checkbox
-		click("//a[@id=\"save-panel-btn\"]");
+		
+		CreateJob Job = new CreateJob(driver);
+		Job.invoice_withlineitem();
 		
 		/* Assertion */
 		String Total_in = gettext("(//div[@class=\"total-value\"])[1]");
@@ -157,7 +152,7 @@ String homepage;
 		String Expectedgrandtotal= "967.20";
 		Assertion(Total_grand, Expectedgrandtotal,"Wrong grand total");
 		
-		click("//button[@class=\"btn btn-primary loading_btn save_btn\"]");// save button
+		Job.save_invocie();
 		
 		String Finalvalue = gettext("(//div[@class=\"total-value\"])[3]");
 		Finalvalue = Finalvalue.replace("£", "");
