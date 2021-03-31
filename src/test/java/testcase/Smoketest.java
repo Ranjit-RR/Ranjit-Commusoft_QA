@@ -288,7 +288,7 @@ public class Smoketest extends Baseclass {
 	@Test(priority = 14)
 	public void WA_Estimate_Accept1() throws InterruptedException
 	{
-		
+		System.out.println("Test");
 	}
 	
 	
