@@ -290,6 +290,7 @@ public class Smoketest extends Baseclass {
 	{
 		System.out.println("Test");
 		System.out.println("now update");
+		System.out.println("Recent");
 	}
 	
 	
