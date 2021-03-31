@@ -67,7 +67,21 @@ public class Customer extends Wrapper {
 		Thread.sleep(9000);
 	}
 	
+	/*K*/
 	
+	public void Add_Customer() throws InterruptedException
+	{
+		Customer_create();
+		Customer_title();
+		Customer_Name();
+		Customer_SurName();
+		Customer_Mobile();
+		Customer_email();
+		Customer_AddressLine1();
+		Customer_Save();
+		Thread.sleep(25000);
+		
+	}
 	
 	
 	

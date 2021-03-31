@@ -22,5 +22,62 @@ public class searchengine extends Wrapper {
 		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
 		click("//span[@class='select2-match']");
 	}
+	/*K*/
+	public void searchbox_supplier(String name)
+	{
+		click("(//span[@class='select2-chosen'])[1]");
+		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class='select2-match']");
+	}
+	public void searchbox_supplier_parts(String name)
+	{
+		dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
+		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
+		click("//div[@class=\"select2 parts-list-dropdown\"]");
+	}
+	public void searchbox_supplier_parts()
+	{
+		dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
+		type("//input[@class='select2-input select2-focused']", "Parts");  //input[@class="select2-input select2-focused"]
+		click("//span[@class='select2-match']");
+	}
+	public void searchbox_supplier_parts_nominalcode(String name)
+	{
+		dclick("(//td[@class=\"overflow_handsontable select_icon afterHiddenColumn htPlaceholder\"])[1]");
+		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class='select2-match']");
+	}
+	public void parts_deliverymethod(String name)
+	{
+		dclick("(//td[@class=\"overflow_handsontable select_icon htPlaceholder\"])[1]");
+		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class='select2-match']");
+	}
+	public void supplierpo_items(String name)
+	{
+		dclick("(//td[@class=\"afterHiddenColumn firstVisibleColumn\"])[1]");
+		type("(//textarea[@class=\"handsontableInput\"])[3]", "Items");
+		typeenter("(//textarea[@class=\"handsontableInput\"])[3]");
+	}
+	public void searchbox_supplier_item_nominalcode(String name)
+	{
+		dclick("(//td[@class=\"overflow_handsontable select_icon afterHiddenColumn htPlaceholder\"])[2]");
+		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class='select2-match']");
+	}
+	public void searchboxedit_supplier_partVAT(String name)
+	{
+		dclick("//td[@class=\"overflow_handsontable select_icon current highlight\"]");
+		clear("(//input[@type=\"text\"])[11]");
+		type("(//input[@type=\"text\"])[11]", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class=\"select2-match\"]");
+	}
+	public void searchboxedit_supplier_itemVAT(String name)
+	{
+		dclick("(//td[@class=\"overflow_handsontable select_icon\"])[3]");
+		clear("(//input[@type=\"text\"])[14]");
+		type("(//input[@type=\"text\"])[14]", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class=\"select2-match\"]");
+	}
 
 }
