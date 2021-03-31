@@ -299,6 +299,7 @@ public class Smoketest extends Baseclass {
 		System.out.println("Test");
 		System.out.println("Testing");
 		System.out.println("request");
+		System.out.println("New item");
 	}
 	
 	
