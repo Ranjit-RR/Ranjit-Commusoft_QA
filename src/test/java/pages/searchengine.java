@@ -33,7 +33,7 @@ public class searchengine extends Wrapper {
 	{
 		dclick("(//td[contains(@class,'overflow_handsontable select_icon')])[1]");
 		type("//input[@class='select2-input select2-focused']", name);  //input[@class="select2-input select2-focused"]
-		click("//div[@class=\"select2 parts-list-dropdown\"]");
+		click("//span[@class='select2-match']");
 	}
 	public void searchbox_supplier_parts()
 	{
