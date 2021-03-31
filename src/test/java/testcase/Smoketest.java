@@ -25,7 +25,7 @@ public class Smoketest extends Baseclass {
 	{
 		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
 		loginpage.login(sheet.sheetIN("Login",0, 1),sheet.sheetIN("Login",1, 1),sheet.sheetIN("Login", 2, 1));
-		Thread.sleep(1000);
+		Thread.sleep(15000);
 		homepage = driver.getCurrentUrl();
 	}
 	@Test(priority = 1)
@@ -40,7 +40,7 @@ public class Smoketest extends Baseclass {
 		customer.Customer_email();
 		customer.Customer_AddressLine1();
 		customer.Customer_Save();
-		Thread.sleep(6000);
+		Thread.sleep(20000);
 		customerpage = driver.getCurrentUrl();
 	}
 	@Test(priority = 2)
