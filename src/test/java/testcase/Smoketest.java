@@ -285,6 +285,11 @@ public class Smoketest extends Baseclass {
 		estimate.Estimate_Accept();
 		Thread.sleep(6000);
 	}
+	@Test(priority = 14)
+	public void WA_Estimate_Accept1() throws InterruptedException
+	{
+		
+	}
 	
 	
 	
