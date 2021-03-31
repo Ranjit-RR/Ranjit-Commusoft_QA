@@ -19,6 +19,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Wrapper {
 
@@ -536,6 +537,10 @@ public class Wrapper {
 	    DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
 	    formattedDate= dateFormat.format(date);
 	    System.out.println("Current time of the day using Date - 12 hour format: " + formattedDate);
+	}
+	public void Assertion(String ER , String AR, String R)
+	{
+		Assert.assertEquals(AR, ER,R);
 	}
 
 }
