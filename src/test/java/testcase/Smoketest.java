@@ -292,7 +292,13 @@ public class Smoketest extends Baseclass {
 		System.out.println("Test");
 		System.out.println("Testing");
 	}
-	
+	@Test(priority = 15)
+	public void WA_Estidfmate_Accept1() throws InterruptedException
+	{
+		System.out.println("Test");
+		System.out.println("Test");
+		System.out.println("Testing");
+	}
 	
 	
 
