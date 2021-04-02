@@ -79,5 +79,11 @@ public class searchengine extends Wrapper {
 		type("(//input[@type=\"text\"])[14]", name);  //input[@class="select2-input select2-focused"]
 		click("//span[@class=\"select2-match\"]");
 	}
+	public void searchbox_Job_parts(String name)
+	{
+		click("//a[@class=\"select2-choice select2-default\"]");
+		type("//input[@class=\"select2-input select2-focused\"]", name);  //input[@class="select2-input select2-focused"]
+		click("//span[@class='select2-match']");
+	}
 
 }

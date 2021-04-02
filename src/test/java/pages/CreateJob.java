@@ -199,12 +199,25 @@ public class CreateJob extends Wrapper {
 	String Expectedintotal= "800.00";
 	Assertion(Total_in, Expectedintotal,"Wrong invoice total");
 	}
+	public void assert_invoicetotal(String ex)
+	{
+	String Total_in = gettext("(//strong[@class=\"ng-binding\"])[1]");
+	Total_in = Total_in.replace("£", "");
+	Assertion(Total_in, ex,"Wrong invoice total");
+	}
 	public void assert_invoicevattotal()
 	{
 	String Total_vat = gettext("(//div[@class=\"total-value\"])[2]");
 	Total_vat = Total_vat.replace("£", "");
 	String Expectedvattotal= "160.00";
 	Assertion(Total_vat, Expectedvattotal,"Wrong vat total");
+	}
+	public void assert_invoicevattotal(String ex) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		String Total_vat = gettext("(//td[@class=\"ng-binding\"])[7]");
+		Total_vat = Total_vat.replace("£", "");
+		Assertion(Total_vat, ex,"Wrong vat total");
 	}
 	public void assert_invoicegrand()
 	{
@@ -213,6 +226,12 @@ public class CreateJob extends Wrapper {
 	String Expectedgrandtotal= "960.00";
 	Assertion(Total_grand, Expectedgrandtotal,"Wrong grand total");
 	}
+	public void assert_invoicegrand(String ex)
+	{
+	String Total_grand = gettext("(//strong[@class=\"ng-binding\"])[3]");
+	Total_grand = Total_grand.replace("£", "");
+	Assertion(Total_grand, ex,"Wrong grand total");
+	}
 	public void assert_finalinvoicetotal()
 	{
 	String Finalvalue = gettext("(//div[@class=\"total-value\"])[3]");
@@ -220,7 +239,30 @@ public class CreateJob extends Wrapper {
 	String ExpectedFinalvalue= "960.00";
 	Assertion(Finalvalue, ExpectedFinalvalue,"Wrong Final total");
 	}
-	
+	public void Jobparts_fulfil(String qty, String markup, String status) throws InterruptedException
+	{
+		Thread.sleep(3000);
+		click("(//span[@class=\"ng-scope\"])[7]");
+		//click("(//span[@class=\"ng-scope\"])[32]");//add new part
+		click("(//a[@class=\"btn btn-primary btn-small ng-scope\"])[1]");
+		searchengine search = new searchengine(driver);
+		search.searchbox_Job_parts("Parts");
+		type("(//input[@type=\"text\"])[2]", qty);
+		type("//input[@name=\"part[markup]\"]", markup);
+		search.selectdropdown("//select[@class=\"full-width-select ng-pristine ng-invalid ng-invalid-required\"]", status);
+		Thread.sleep(2000);
+		click("//button[@type=\"submit\"]");
+	}
+	public void order_from_supplier() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		click("//span[@class=\"preview-file-link actions-toggle ng-scope ss-plus\"]");//click + 
+		Thread.sleep(2000);
+		click("//*[@id=\"actions-dropdown\"]/span/actionstemplate/div/span[1]/span[1]/a"); //fullfil
+		click("(//span[@class=\"ng-scope\"])[48]");//order from supplier
+		Thread.sleep(2000);
+		click("//button[@class=\"btn btn-primary primary-button ng-binding\"]");
+	}
 	
 	
 	
