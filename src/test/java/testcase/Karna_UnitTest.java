@@ -124,7 +124,7 @@ String homepage;
 		
 	}
 	@Test(priority=6)
-	public void test() throws InterruptedException
+	public void Supplier_PO() throws InterruptedException
 	{
 		Thread.sleep(2000);
 		driver.get(homepage);
