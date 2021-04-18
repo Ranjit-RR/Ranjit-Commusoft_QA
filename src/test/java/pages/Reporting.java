@@ -184,7 +184,6 @@ public class Reporting extends Wrapper {
 			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
 			String b="No records found";
 			Assertion(b, a, "No records found - Assertion failed");
-			Assertion(b, a, "No records found - Assertion failed");
 		}
 	}
 	
