@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import action.Baseclass;
 import pages.LoginPage;
+import pages.Reporting;
 import pages.Supplier;
 import pages.Customer;
 import pages.CreateJob;
@@ -155,6 +156,70 @@ String homepage;
 		Job.assert_Suppliersubtotal();
 		Job.assert_Suppliervat();
 		Job.assert_suppliereditgrand();	
+	}
+	@Test (priority=7)
+	public void CustomerReports() throws InterruptedException
+	{
+		
+		driver.get(homepage);
+		//customer report - 1
+		Reporting Report = new Reporting(driver); 
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.Customers_Report();
+		Report.First_Plus_button();
+		Report.Customer1_Assertion("View Customer");
+			
+		//customer report - 2
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.WA_Report();
+		Report.First_Plus_button();
+		Report.Customer2_Assertion("View Workaddress");
+		
+		//customer report - 3
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.Appliance_Details_Report();
+		Report.Customer3_Assertion();
+		
+		//customer report - 4
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.Advertising_Performance_Report();
+		Report.Customer4_Assertion();
+		
+		//customer report - 5
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.JobEstimateAccessPhoneCallList_Report();
+		Report.Customer5_Assertion();
+				
+		//customer report - 6
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.ServicePlan_Report();
+		Report.Customer6_Assertion();
+				
+		//customer report - 7
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.Asset_Report();
+		Report.Customer7_Assertion();
+				
+		//customer report - 8
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.Contracts_Report();
+		Report.Customer8_Assertion();
+				
+		//customer report - 9
+		Report.Report_Sidemenu();
+		Report.Customer_Report();
+		Report.PPM_Report();
+		Report.Customer9_Assertion();
+		
 	}
 
 	
