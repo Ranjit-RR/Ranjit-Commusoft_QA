@@ -256,6 +256,79 @@ String homepage;
 		Report.Contacts_Report();
 		Report.Supplier2_Assertion();
 	}
+	@Test (priority=10)
+	public void EstimateReport() throws InterruptedException
+	{
+		driver.get(homepage);
+		//Estimate Report = 1
+		Reporting Report = new Reporting(driver);
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Estimate_Report();
+		Report.Estimates_Report();
+		Report.Estimate1_Assertion();
+			
+				
+		//Estimate Report = 2
+		Report.Report_Sidemenu();
+		Report.Estimate_Report();
+		Report.Accepted_Vs_Rejected_Estimates_Report();
+		Report.Estimate2_Assertion();
+				
+		//Estimate Report = 3
+		Report.Report_Sidemenu();
+		Report.Estimate_Report();
+		Report.Rejected_Reasons_Report();
+		Report.Estimate3_Assertion();
+	}
+	@Test(priority=11)
+	public void JobReport() throws InterruptedException
+	{
+		driver.get(homepage);
+		//Job Report = 1
+		Reporting Report = new Reporting(driver);
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.Jobs_Report();
+		Report.Job1_Assertion();
+				
+		//Job Report = 2
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.AdditionalWork_Report();
+		Report.Job2_Assertion();
+				
+		//Job Report = 3
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.FOC_Report();
+		Report.Job3_Assertion();
+				
+		//Job Report = 4
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.Aborted_Report();
+		Report.Job4_Assertion();
+				
+		//Job Report = 5
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.Outstanding_Jobs_Report();
+		Report.Job5_Assertion();
+				
+		//Job Report = 6
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.SLA_Report();
+				
+		//Job Report = 7
+		driver.get(homepage);
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Job_Report();
+		Report.SLA_Performance_Report();
+	}
 
 	
 }

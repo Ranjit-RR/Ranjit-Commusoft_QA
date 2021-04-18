@@ -278,6 +278,230 @@ public class Reporting extends Wrapper {
 			Assertion(b, a, "No records found - Assertion failed");
 		}
 	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Estimate_Report() throws InterruptedException
+	{
+		click("//a[@has-root-permission=\"estimateReports\"]");//click Estimate report
+		Thread.sleep(3000);
+	}
+	public void Estimates_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicestimatereports,readaccess\"])[1]");//click estimates report
+		Thread.sleep(6000);
+	}
+	public void Estimate1_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Estimate Number\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Accepted_Vs_Rejected_Estimates_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicestimatereports,readaccess\"])[2]");//click estimates report
+		Thread.sleep(6000);
+	}
+	public void Estimate2_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"User\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Rejected_Reasons_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicestimatereports,readaccess\"])[3]");//click estimates report
+		Thread.sleep(6000);
+	}
+	public void Estimate3_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Estimate Number\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Job_Report() throws InterruptedException
+	{
+		click("//a[@has-root-permission=\"jobReports\"]");//click Job report
+		Thread.sleep(3000);
+	}
+	public void Jobs_Report() throws InterruptedException
+	{
+		click("//a[@has-permission=\"Basicjobreports,readaccess\" and contains(text(), 'Jobs')]");//click jobs report
+		Thread.sleep(6000);
+	}
+	public void Job1_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Customer Name\" and @data-row-index=\"0\"]");
+		}
+		catch(Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void AdditionalWork_Report() throws InterruptedException
+	{
+		click("//a[@has-permission=\"Basicjobreports,readaccess\" and contains(text(), 'Additional Works')]");//click additional work report
+		Thread.sleep(6000);
+	}
+	public void Job2_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Job No\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void FOC_Report() throws InterruptedException
+	{
+		click("//a[@has-permission=\"Basicjobreports,readaccess\" and contains(text(), 'Free of charge jobs')]");//click FOC report
+		Thread.sleep(6000);
+	}
+	public void Job3_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Free of charge created by\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Aborted_Report() throws InterruptedException
+	{
+		click("//a[@has-permission=\"Basicjobreports,readaccess\" and contains(text(), 'Aborted jobs')]");//click FOC report
+		Thread.sleep(6000);
+	}
+	public void Job4_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Customer Name\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Outstanding_Jobs_Report() throws InterruptedException
+	{
+		click("//a[@ng-if=\"reportList.customState\" and contains(text(),'Outstanding jobs')]");//click outstanding report
+		Thread.sleep(6000);
+	}
+	public void Job5_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Customer Name\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void SLA_Report()
+	{
+		try
+		{
+			isdisplayed("//a[@has-permission=\"ViewSLAReport,readaccess\" and contains(text(),'SLA jobs')]");
+			Thread.sleep(3000);
+			click("//a[@has-permission=\"ViewSLAReport,readaccess\" and contains(text(),'SLA jobs')]");//click SLA jobs
+			Thread.sleep(6000);
+			try
+			{
+				isdisplayed("//span[@data-column=\"Job Description\" and @data-row-index=\"0\"]");
+			}
+			catch(Exception e)
+			{
+				String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+				String b="No records found";
+				Assertion(b, a, "No records found - Assertion failed");
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("SLA Module is not enabled in this client ID, so no SLA_Report");
+		}
+	}
+/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void SLA_Performance_Report()
+	{
+		try
+		{
+			isdisplayed("//a[@href=\"/reporting/view/jobs/SLA_performance_by_job_description\"]");
+			Thread.sleep(3000);
+			click("//a[@href=\"/reporting/view/jobs/SLA_performance_by_job_description\"]");//click SLA2 jobs
+			Thread.sleep(6000);
+			try
+			{
+				isdisplayed("//th[@class=\"sorting_disabled\" and contains(text(),'Job description')]");
+			}
+			catch(Exception e)
+			{
+				String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+				String b="No records found";
+				Assertion(b, a, "No records found - Assertion failed");
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("SLA Module is not enabled in this client ID, so no SLA_Performance_Report");
+		}
+	}
 	
 	
 	
