@@ -186,7 +186,98 @@ public class Reporting extends Wrapper {
 			Assertion(b, a, "No records found - Assertion failed");
 		}
 	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	/*---------------------------------------------------------------------------------------------------------*/
 	
+	public void Service_Reminder_Report() throws InterruptedException
+	{
+		click("//a[@has-root-permission=\"serviceReminderReports\"]");//click service reminder report
+		Thread.sleep(4000);
+	}
+	public void Service_Reminders_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicservicereminderreports,readaccess\"])[1]");//click 1st report
+		Thread.sleep(6000);
+	}
+	public void ServiceReminder1_Assertion()
+	{
+		try
+		{
+		isdisplayed("//span[@data-column=\"Customer Name\" and @data-row-index=\"0\"]");
+		}
+		catch(Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Properties_Without_Services_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicservicereminderreports,readaccess\"])[2]");//click 1st report
+		Thread.sleep(6000);
+	}
+	public void ServiceReminder2_Assertion()
+	{
+		try
+		{
+		isdisplayed("//span[@data-column=\"Customer.Name\" and @data-row-index=\"0\"]");
+		}
+		catch(Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Supplier_Report() throws InterruptedException
+	{
+		click("//a[@has-root-permission=\"supplierReports\"]");//click Supplier report
+		Thread.sleep(4000);
+	}
+	public void Suppliers_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicsupplierreports,readaccess\"])[1]");//click Suppliers report
+		Thread.sleep(6000);
+	}
+	public void Supplier1_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Name\" and @data-row-index=\"0\"]");
+		}
+		catch(Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
+	/*---------------------------------------------------------------------------------------------------------*/
+	
+	public void Contacts_Report() throws InterruptedException
+	{
+		click("(//a[@has-permission=\"Basicsupplierreports,readaccess\"])[2]");//click Suppliers report
+		Thread.sleep(6000);
+	}
+	public void Supplier2_Assertion()
+	{
+		try
+		{
+			isdisplayed("//span[@data-column=\"Supplier.Name\" and @data-row-index=\"0\"]");
+		}
+		catch (Exception e)
+		{
+			String a=gettext("(//div[@class=\"warning-message ng-binding\" and @ng-bind-html=\"message\" and contains(text(),'No records found')])[1]");
+			String b="No records found";
+			Assertion(b, a, "No records found - Assertion failed");
+		}
+	}
 	
 	
 	

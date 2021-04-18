@@ -220,6 +220,42 @@ String homepage;
 		Report.PPM_Report();
 		Report.Customer9_Assertion();
 	}
+	@Test (priority=8)
+	public void ServiceRemindersReports() throws InterruptedException
+	{
+		driver.get(homepage);
+		//Service_Reminder = 1
+		Reporting Report = new Reporting(driver);
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Service_Reminder_Report();
+		Report.Service_Reminders_Report();
+		Report.ServiceReminder1_Assertion();
+			
+		//Service_Reminder = 2
+		Report.Report_Sidemenu();
+		Report.Service_Reminder_Report();
+		Report.Properties_Without_Services_Report();
+		Report.ServiceReminder2_Assertion();
+	}
+	@Test (priority = 9)
+	public void SupplierReports() throws InterruptedException
+	{
+		driver.get(homepage);
+		//Supplier Report = 1
+		Reporting Report = new Reporting(driver);
+		Report.Reporttab();
+		Report.Report_Sidemenu();
+		Report.Supplier_Report();
+		Report.Suppliers_Report();
+		Report.Supplier1_Assertion();
+				
+		//Supplier Report = 2
+		Report.Report_Sidemenu();
+		Report.Supplier_Report();
+		Report.Contacts_Report();
+		Report.Supplier2_Assertion();
+	}
 
 	
 }
