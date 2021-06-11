@@ -260,6 +260,7 @@ public class CreateJob extends Wrapper {
 	{
 	String Total_in = gettext("(//strong[@class=\"ng-binding\"])[1]");
 	Total_in = Total_in.replace("£", "");
+	//int k =Integer.parseInt(Total_in);
 	Assertion(Total_in, ex,"Wrong invoice total");
 	}
 	public void assert_invoicevattotal()
