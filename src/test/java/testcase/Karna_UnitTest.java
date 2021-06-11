@@ -329,7 +329,7 @@ String homepage;
 		Report.Job_Report();
 		Report.SLA_Performance_Report();
 	}
-	@Test(priority=11)
+	@Test(priority=12)
 	public void tested() throws InterruptedException
 	{
 	}
