@@ -7,6 +7,7 @@ import action.Baseclass;
 import pages.CreateJob;
 import pages.Customer;
 import pages.LoginPage;
+import pages.Supplier;
 import pages.searchengine;
 
 public class K_Check extends Baseclass {
@@ -24,27 +25,9 @@ String homepage;
 	@Test(priority =1)
 	public void Jobparts_PO() throws InterruptedException
 	{
-		Thread.sleep(3000);
-		Customer customer = new Customer(driver);
-		CreateJob job = new CreateJob(driver);
-		searchengine search = new searchengine(driver);
-		customer.Add_Customer();
-		job.addjob();
-		job.JobDescription("No Rules");
-		job.createjob();
-		job.Jobparts_fulfil("10", "1", "Requested");
-		job.order_from_supplier();
-		Thread.sleep(2000);
-		search.searchbox_supplier("Supplier");
-		search.searchbox_supplier_parts_nominalcode("parts");
-		search.parts_deliverymethod("Delivery to office");
-		job.save_po();
-		/* Assertion for invoiec values check */
-		job.assert_invoicetotal("5,000.00");
-		job.assert_invoicevattotal("1,000.00");
-		job.assert_invoicegrand("6,000.00");
 		
 	}
+	
 	
 	
 	
